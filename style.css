@@ -1,0 +1,306 @@
+* {
+    box-sizing: border-box;
+}
+
+#greet {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 20px;
+    font-family: 'Anta';
+    background: linear-gradient(58deg, #0b0004, #030a39de, #ac5967, #ff0000a1);
+    
+    font-stretch: ultra-expanded;
+    /* background-color: pink; */
+}
+
+#message {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: cursive;
+    color: pink;
+    font-stretch: ultra-condensed;
+    background: pink;
+}
+
+/* Notes field */
+
+
+
+#notes-field {
+    background-color: pink;
+    font-family: 'Ubuntu';
+    display: grid;
+    padding: 2vw;
+    border-radius: 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5vw;
+    row-gap: 10px;
+    min-height: 30vh;
+}
+
+.box {
+    width: 14vw;
+    height: 14vw;
+    background-color: white;
+    border-radius: 7%;
+}
+
+#box1 div {
+    border: 3px dotted pink;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    width: 6vw;
+    height: 6vw;
+    text-align: center;
+    align-items: center;
+}
+
+#box1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.3rem;
+    cursor: pointer;
+
+}
+
+/* popup box */
+#pop-up {
+    border: 3px solid rgb(107 15 15);
+    padding: 2vw;
+    padding-top: 0;
+    width: 30vw;
+    border-radius: 23px;
+    font-size: 1.5rem;
+    font-family: "Ubuntu";
+}
+
+.movement {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    transform: scale(0);
+    transition-duration: 0.5s;
+}
+
+.cross {
+    float: right;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 0, 0, 0.425);
+    border-radius: 5px;
+    border: solid red;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -28px -10px;
+    cursor: pointer;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 25px 45px 0 rgba(0, 0, 0, 0.2);
+}
+
+#pop-up label,
+#content,
+#header {
+    display: block;
+    margin: 5px;
+}
+
+#content,
+#header {
+    border: 2px solid rgb(117, 116, 116);
+    width: 25vw;
+    resize: none;
+}
+
+#header {
+    height: 5vh;
+    font-size: 1.3rem;
+    font-family: 'Ubuntu';
+}
+
+#content {
+    height: 25vh;
+    font-family: 'Ubuntu';
+}
+
+#content::-webkit-scrollbar {
+    display: none;
+}
+
+.add-note {
+    width: 25vw;
+    height: 5vh;
+    margin: 10px 4px;
+    background-color: rgb(202, 128, 140);
+    font-family: 'Ubuntu';
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+#pop-up h4 {
+    margin-bottom: 0;
+}
+
+.box.item {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+.box.item h5 {
+    margin: 2px;
+    font-size: 1.1rem;
+}
+
+.three-dots {
+    float: right;
+}
+
+.bottom-content i:hover {
+    cursor: pointer;
+}
+
+.bottom-content span {
+    font-size: 0.8rem;
+    margin: 5px;
+}
+
+.menu {
+    list-style: none;
+    transform-origin: bottom right;
+    transform: scale(0);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 2px;
+    background: white;
+    box-shadow: 2px 2px 10px rgb(35, 34, 34);
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+.bottom-content {
+    position: relative;
+}
+
+.menu li {
+    font-size: 0.8rem;
+    margin: 5px;
+}
+
+.menu li:hover {
+    cursor: pointer;
+    background-color: rgb(244, 234, 234);
+}
+
+.options {
+    font-family: "Ubuntu";
+}
+
+@media only screen and (max-width: 1100px) {
+    .box {
+        width: 18vw;
+        height: 18vw;
+    }
+}
+@media only screen and (max-width: 900px)
+{
+    .box{
+       min-width: 25vw;
+       min-height: 25vw;
+    }
+    #box1 div{
+        width: 10vw;
+    height: 10vw;
+    }
+    #pop-up{
+        min-width: 60vw;
+     }
+     #header{
+        min-width: 50vw;
+     }
+     #content{
+        min-width: 50vw;
+     }
+     .add-note{
+        width: 50vw;
+     }
+}
+@media only screen and (max-width: 650px)
+{
+    #greet{
+        font-size: 2rem;
+    }
+    #message{
+        font-size: 1rem;
+    }
+    .box{
+        min-width: 30vw;
+        min-height: 30vw;
+     }
+     #notes-field{
+        justify-content: space-evenly;
+        gap: 5px;
+     }
+}
+@media only screen and (max-width: 500px)
+{
+    #notes-field{
+        justify-content: space-around;
+        min-width: 35vw;
+        min-height: 35vw;
+    }
+    .box{
+        min-width: 45vw;
+        min-height: 45vw;
+        gap: 1rem;
+    }
+    .box.item h5{
+        font-size: 1rem;
+    }
+    #box1{
+        font-size: 1rem;
+    }
+    #pop-up{
+        min-width: 80vw;
+     }
+     #header{
+        min-width: 70vw;
+     }
+     #content{
+        min-width: 70vw;
+     }
+     .add-note{
+        width: 50vw;
+     }
+}
+@media only screen and (max-width: 400px)
+{
+    .box{
+        min-width: 70vw;
+        min-height: 70vw;
+    }
+}
